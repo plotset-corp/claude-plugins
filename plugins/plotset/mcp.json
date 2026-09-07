@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "plotset": {
+      "type": "http",
+      "url": "https://mcp.plotset.com/mcp"
+    }
+  }
+}

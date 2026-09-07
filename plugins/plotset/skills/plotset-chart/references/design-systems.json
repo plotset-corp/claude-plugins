@@ -1,0 +1,773 @@
+{
+  "_comment": "Machine-readable source of truth for the 10 PlotSet chart design systems. scripts/apply_design.py reads this. Prose rationale and selection guidance live in design-systems.md. Fonts are constrained to PlotSet's closed catalogue: static charts need the exact fontFamily string plus its fontFamily_url; video charts take a bare enum name (note 'Source Sans 3' and 'Neuzeit Grotesk' differ from the static 'Source Sans Pro' / 'Neuzeit Grotesk Light').",
+  "fontUrls": {
+    "Roboto": "http://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf",
+    "Lato": "http://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHvxk6XweuBCY.ttf",
+    "Open Sans": "http://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4nY1M2xLER.ttf",
+    "Source Sans Pro": "http://fonts.gstatic.com/s/sourcesanspro/v21/6xK3dSBYKcSV-LCoeQqfX1RYOo3aP6TkmDZz9g.ttf",
+    "Noto Sans": "http://fonts.gstatic.com/s/notosans/v27/o-0IIpQlx3QUlC5A4PNb4j5Ba_2c7A.ttf",
+    "Oswald": "http://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvgUFoZAaRliE.ttf",
+    "Inter": "http://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZhrib2Bg-4.ttf",
+    "Roboto Slab": "http://fonts.gstatic.com/s/robotoslab/v24/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaG5iddG-1A.ttf",
+    "Playfair Display": "http://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.ttf",
+    "Anton": "http://fonts.gstatic.com/s/anton/v23/1Ptgg87LROyAm0K08i4gS7lu.ttf",
+    "Bree Serif": "http://fonts.gstatic.com/s/breeserif/v17/4UaHrEJCrhhnVA3DgluAx63j5pN1MwI.ttf",
+    "Bodoni Moda": "http://fonts.gstatic.com/s/bodonimoda/v19/aFT67PxzY382XsXX63LUYL6GYFcan6NJrKp-VPjfJMShrpsGFUt8oU7awIBytVjMYwE.ttf",
+    "Josefin Slab": "http://fonts.gstatic.com/s/josefinslab/v20/lW-swjwOK3Ps5GSJlNNkMalNpiZe_ldbOR4W71msd3k3K6CcEyI.ttf",
+    "Passion One": "http://fonts.gstatic.com/s/passionone/v16/PbynFmL8HhTPqbjUzux3JHuW_Frg6YoV.ttf",
+    "Special Elite": "http://fonts.gstatic.com/s/specialelite/v18/XLYgIZbkc4JPUL5CVArUVL0nhncESXFtUsM.ttf",
+    "Monoton": "http://fonts.gstatic.com/s/monoton/v15/5h1aiZUrOngCibe4fkbBQ2S7FU8.ttf",
+    "Cabin Sketch": "http://fonts.gstatic.com/s/cabinsketch/v19/QGYpz_kZZAGCONcK2A4bGOjMn9JM6fnuKg.ttf",
+    "Fredericka the Great": "http://fonts.gstatic.com/s/frederickathegreat/v15/9Bt33CxNwt7aOctW2xjbCstzwVKsIBVV-9Skz7Ylch2L.ttf",
+    "VT323": "http://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2hsYHpT2dkNE.ttf",
+    "Montserrat": "http://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-Y3tcoqK5.ttf",
+    "Neuzeit Grotesk Light": "https://plotset.com/assets/fonts/Neuzeit%20Grotesk%20Light.ttf"
+  },
+  "systems": {
+    "ledger": {
+      "title": "Ledger",
+      "mode": "light",
+      "grounding": "The green columnar accounting pad: ruled bands, figures aligned to the right, totals stamped in ink.",
+      "useWhen": "Money. Revenue, cost, budget, P&L, unit economics, anything an accountant or CFO would recognise. Also inventory and headcount counts where precision beats drama.",
+      "bg": "#E7EEE6",
+      "surface": "#FFFFFF",
+      "ink": "#17231B",
+      "body": "#3A4A3F",
+      "muted": "#78887C",
+      "rule": "#9CB0A2",
+      "grid": "#C4D3C7",
+      "ramp": [
+        "#123A5A",
+        "#B07D2B",
+        "#3E6E5C",
+        "#7A4A62",
+        "#5A6E86",
+        "#8C5A2B",
+        "#2F5D4E",
+        "#6E5A7A",
+        "#45566B"
+      ],
+      "sequential": [
+        "#EDF3EA",
+        "#C9DCD3",
+        "#9CC0BE",
+        "#6C9FA9",
+        "#457E93",
+        "#255D79",
+        "#123A5A"
+      ],
+      "diverging": [
+        "#8C5A2B",
+        "#D9C9A8",
+        "#EDF3EA",
+        "#8FAFC0",
+        "#123A5A"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Roboto Slab",
+          "video": "Roboto Slab",
+          "bold": true
+        },
+        "body": {
+          "static": "Inter",
+          "video": "Inter",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 26,
+        "subtitle": 20,
+        "axisTitle": 20,
+        "axisLabel": 20,
+        "legend": 19,
+        "tooltip": 17,
+        "value": 20,
+        "footer": 16
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 1,
+        "swatchRadius": 2,
+        "tooltipRadius": 2,
+        "gridWidth": 0.6,
+        "ruleWidth": 0.8,
+        "barWidth": 62
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": true,
+      "videoScaleMultiplier": 2.2
+    },
+    "bulletin": {
+      "title": "Bulletin",
+      "mode": "light",
+      "grounding": "Health-ministry data bulletins and public wayfinding: one voice, maximum legibility, nothing decorative competing with the number.",
+      "useWhen": "Public-interest statistics — health, population, education, safety, survey results, NGO and government reporting. The default when the audience is the general public and the subject is serious.",
+      "bg": "#FFFFFF",
+      "surface": "#F4F7F8",
+      "ink": "#10262B",
+      "body": "#33474D",
+      "muted": "#6E8288",
+      "rule": "#C3D2D5",
+      "grid": "#E2EBED",
+      "ramp": [
+        "#0B6E7F",
+        "#E4572E",
+        "#2E5E8C",
+        "#9BAA3C",
+        "#7A4E9B",
+        "#C9902B",
+        "#4B8B7A",
+        "#B8455F",
+        "#566C7A"
+      ],
+      "sequential": [
+        "#EAF3F4",
+        "#C5E0E3",
+        "#99C9CF",
+        "#68AEB8",
+        "#3D909D",
+        "#1E7C89",
+        "#0B6E7F"
+      ],
+      "diverging": [
+        "#B8455F",
+        "#E8B4B8",
+        "#F2F5F5",
+        "#8FC3C9",
+        "#0B6E7F"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Noto Sans",
+          "video": "Noto Sans",
+          "bold": true
+        },
+        "body": {
+          "static": "Noto Sans",
+          "video": "Noto Sans",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 25,
+        "subtitle": 20,
+        "axisTitle": 20,
+        "axisLabel": 21,
+        "legend": 20,
+        "tooltip": 18,
+        "value": 21,
+        "footer": 16
+      },
+      "shape": {
+        "barRadius": 2,
+        "barOpacity": 1,
+        "swatchRadius": 3,
+        "tooltipRadius": 4,
+        "gridWidth": 0.6,
+        "ruleWidth": 0.8,
+        "barWidth": 60
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": true,
+      "videoScaleMultiplier": 2.2
+    },
+    "broadcast": {
+      "title": "Broadcast",
+      "mode": "dark",
+      "grounding": "Stadium jumbotron and TV sports lower-thirds: condensed heavy type, saturated signal colours, values burnt into the bars so they read at a glance from across a room.",
+      "useWhen": "Competition and ranking — leagues, leaderboards, market share races, head-to-head comparisons, anything with a winner. The first choice for racebar/racecolumn/racepie video.",
+      "bg": "#0E1826",
+      "surface": "#17253A",
+      "ink": "#FFFFFF",
+      "body": "#C3D2E4",
+      "muted": "#7E92AC",
+      "rule": "#2C4059",
+      "grid": "#22334A",
+      "ramp": [
+        "#00C2FF",
+        "#FF3D77",
+        "#FFD24A",
+        "#4DFFB8",
+        "#B073FF",
+        "#FF8A3D",
+        "#46E0E0",
+        "#FF5C5C",
+        "#9FE870"
+      ],
+      "sequential": [
+        "#14263B",
+        "#1B3E5C",
+        "#1F5B80",
+        "#1F7AA6",
+        "#189FC9",
+        "#0AB2E6",
+        "#00C2FF"
+      ],
+      "diverging": [
+        "#FF3D77",
+        "#8A3C63",
+        "#22334A",
+        "#1F7AA6",
+        "#00C2FF"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Anton",
+          "video": "Anton",
+          "bold": false
+        },
+        "body": {
+          "static": "Oswald",
+          "video": "Oswald",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 32,
+        "subtitle": 21,
+        "axisTitle": 20,
+        "axisLabel": 22,
+        "legend": 22,
+        "tooltip": 18,
+        "value": 26,
+        "footer": 17
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 1,
+        "swatchRadius": 0,
+        "tooltipRadius": 2,
+        "gridWidth": 0.4,
+        "ruleWidth": 1,
+        "barWidth": 78
+      },
+      "gridPolicy": "none",
+      "valueLabels": true,
+      "videoScaleMultiplier": 2.4
+    },
+    "fieldnotes": {
+      "title": "Field Notes",
+      "mode": "light",
+      "grounding": "Botanical survey notebooks and herbarium sheets: pigments mixed from the subject itself, rules drawn thin so the specimen stays the loudest thing on the page.",
+      "useWhen": "Nature and the slow sciences — climate, ecology, agriculture, energy, water, land use, longitudinal research. Good when the data rewards patient reading rather than a single headline.",
+      "bg": "#E8EBE4",
+      "surface": "#F7F8F4",
+      "ink": "#232A21",
+      "body": "#46503F",
+      "muted": "#7E8878",
+      "rule": "#ADB6A3",
+      "grid": "#CFD6C7",
+      "ramp": [
+        "#4A6B3A",
+        "#A85D2E",
+        "#35617A",
+        "#8A7B2E",
+        "#6B4A6B",
+        "#2E7A6B",
+        "#B0703F",
+        "#4A5A7A",
+        "#7A8A3A"
+      ],
+      "sequential": [
+        "#F0F2EA",
+        "#D6DEC8",
+        "#B4C7A2",
+        "#8DAE7C",
+        "#679259",
+        "#45763F",
+        "#2E5B36"
+      ],
+      "diverging": [
+        "#A85D2E",
+        "#DCC3A4",
+        "#F0F2EA",
+        "#A6BE9A",
+        "#2E5B36"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Bree Serif",
+          "video": "Bree Serif",
+          "bold": false
+        },
+        "body": {
+          "static": "Lato",
+          "video": "Lato",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 26,
+        "subtitle": 20,
+        "axisTitle": 19,
+        "axisLabel": 20,
+        "legend": 19,
+        "tooltip": 17,
+        "value": 18,
+        "footer": 16
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 0.95,
+        "swatchRadius": 2,
+        "tooltipRadius": 3,
+        "gridWidth": 0.4,
+        "ruleWidth": 0.6,
+        "barWidth": 58
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": false,
+      "videoScaleMultiplier": 2.2
+    },
+    "terminal": {
+      "title": "Terminal",
+      "mode": "dark",
+      "grounding": "Amber-phosphor CRT crossed with a modern observability console: a dark instrument panel where each series is a distinct signal colour, not decoration.",
+      "useWhen": "Engineering telemetry — latency, throughput, error rates, uptime, build and deploy metrics, infrastructure cost. Use when the reader is technical and expects density.",
+      "bg": "#0F1A24",
+      "surface": "#16242F",
+      "ink": "#E8F1F5",
+      "body": "#A9BECB",
+      "muted": "#6C8494",
+      "rule": "#2A3F4E",
+      "grid": "#1E2F3B",
+      "ramp": [
+        "#FFB000",
+        "#35C8E8",
+        "#FF6B81",
+        "#7CE38B",
+        "#C792EA",
+        "#FF9F5A",
+        "#52D6C4",
+        "#E4E45A",
+        "#8AA8FF"
+      ],
+      "sequential": [
+        "#16242F",
+        "#26404A",
+        "#3B5F5C",
+        "#5F8560",
+        "#8CA855",
+        "#C3C63A",
+        "#FFB000"
+      ],
+      "diverging": [
+        "#FF6B81",
+        "#8A4A58",
+        "#1E2F3B",
+        "#8A7A2E",
+        "#FFB000"
+      ],
+      "fonts": {
+        "display": {
+          "static": "VT323",
+          "video": "VT323",
+          "bold": false
+        },
+        "body": {
+          "static": "Inter",
+          "video": "Inter",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 38,
+        "subtitle": 25,
+        "axisTitle": 19,
+        "axisLabel": 20,
+        "legend": 19,
+        "tooltip": 17,
+        "value": 20,
+        "footer": 17
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 0.9,
+        "swatchRadius": 0,
+        "tooltipRadius": 2,
+        "gridWidth": 0.5,
+        "ruleWidth": 0.8,
+        "barWidth": 64
+      },
+      "gridPolicy": "both",
+      "valueLabels": false,
+      "videoScaleMultiplier": 2.2,
+      "notes": "VT323 is a bitmap face — it only reads well above ~28px, which is why the display sizes here are large. Never route body text through it."
+    },
+    "atlas": {
+      "title": "Atlas",
+      "mode": "light",
+      "grounding": "Topographic survey sheets and nautical charts: land tinted in graduated washes, place names set small and calm, the legend doing real work.",
+      "useWhen": "Anything geographic — choropleth, hexagon and point maps, flow maps, regional or country comparison. Also the right pick for any single-measure ranking that wants a sequential rather than categorical palette.",
+      "bg": "#F1F4F2",
+      "surface": "#FFFFFF",
+      "ink": "#1B2B33",
+      "body": "#3E535C",
+      "muted": "#7A8F98",
+      "rule": "#B4C4C9",
+      "grid": "#D8E2E4",
+      "ramp": [
+        "#2A6F8E",
+        "#C77B39",
+        "#5C8C4A",
+        "#8E5573",
+        "#3F8C87",
+        "#A8632E",
+        "#4C6FA0",
+        "#7C8C3A",
+        "#93553F"
+      ],
+      "sequential": [
+        "#F2F7F5",
+        "#CFE3DE",
+        "#A3CCC6",
+        "#6FB0AC",
+        "#418F92",
+        "#23697A",
+        "#12475C"
+      ],
+      "diverging": [
+        "#9E4A2E",
+        "#D9A283",
+        "#F2EFE4",
+        "#7FA9BC",
+        "#1F5F7A"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Montserrat",
+          "video": "Montserrat",
+          "bold": true
+        },
+        "body": {
+          "static": "Source Sans Pro",
+          "video": "Source Sans 3",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 25,
+        "subtitle": 18,
+        "axisTitle": 19,
+        "axisLabel": 20,
+        "legend": 19,
+        "tooltip": 17,
+        "value": 18,
+        "footer": 16
+      },
+      "shape": {
+        "barRadius": 1,
+        "barOpacity": 1,
+        "swatchRadius": 2,
+        "tooltipRadius": 3,
+        "gridWidth": 0.4,
+        "ruleWidth": 0.6,
+        "barWidth": 58
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": false,
+      "videoScaleMultiplier": 2.2,
+      "notes": "Maps carry no palette.* at all -- their colours live under colors.colorSeq / colors.colorMin|Mid|Max, with mapType.colorScaleType choosing the family; pass --palette sequential and apply_design.py fills those. On a NON-map chart, do not reach for palette.type 'spectrum' -- verified behaviour is that it paints every bar the same single step. Use palette.type 'multi' with one interpolated colour per bar (--categories N), which is what apply_design.py now emits."
+    },
+    "editorial": {
+      "title": "Editorial",
+      "mode": "light",
+      "grounding": "The data page of a culture magazine: one didone headline at a size that commits, everything else stepped far below it, a single ink-red doing all the pointing.",
+      "useWhen": "Feature journalism, opinion and analysis, launch posts, anything published under a byline where the chart carries an argument rather than a lookup table.",
+      "bg": "#FFFFFF",
+      "surface": "#FAF7F7",
+      "ink": "#14100F",
+      "body": "#45383A",
+      "muted": "#8A7A7C",
+      "rule": "#D8CBCD",
+      "grid": "#EFE7E8",
+      "ramp": [
+        "#B3123C",
+        "#1F3B6E",
+        "#C8873A",
+        "#4B7A5E",
+        "#7A3B76",
+        "#2E6E86",
+        "#A2492E",
+        "#55607A",
+        "#8A8A3A"
+      ],
+      "sequential": [
+        "#FBEEF1",
+        "#F2C9D3",
+        "#E69CAF",
+        "#D66E8A",
+        "#C64467",
+        "#BC2650",
+        "#B3123C"
+      ],
+      "diverging": [
+        "#1F3B6E",
+        "#8A9BC0",
+        "#F4F1F1",
+        "#D98BA1",
+        "#B3123C"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Bodoni Moda",
+          "video": "Bodoni Moda",
+          "bold": true
+        },
+        "body": {
+          "static": "Lato",
+          "video": "Lato",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 36,
+        "subtitle": 18,
+        "axisTitle": 18,
+        "axisLabel": 18,
+        "legend": 17,
+        "tooltip": 17,
+        "value": 18,
+        "footer": 14
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 1,
+        "swatchRadius": 0,
+        "tooltipRadius": 0,
+        "gridWidth": 0.3,
+        "ruleWidth": 0.5,
+        "barWidth": 54
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": false,
+      "videoScaleMultiplier": 2.3,
+      "notes": "The type scale is the whole idea: a 40/12 jump between headline and labels. Do not soften it toward the middle — a Bodoni headline at 22px is just a small serif."
+    },
+    "playbook": {
+      "title": "Playbook",
+      "mode": "light",
+      "grounding": "Children's picture books and board-game boards: fat rounded forms, colours that stay friendly next to each other, every number said out loud on the bar.",
+      "useWhen": "Education, classrooms, kids, consumer apps, onboarding, community and fundraising updates. Anything where the reader is not being paid to look at the chart.",
+      "bg": "#EAF6F0",
+      "surface": "#FFFFFF",
+      "ink": "#1F3A34",
+      "body": "#3E5B54",
+      "muted": "#7C9A92",
+      "rule": "#BBD8CE",
+      "grid": "#D7EAE2",
+      "ramp": [
+        "#FF8A5B",
+        "#4FB3D9",
+        "#FFC64F",
+        "#7ED07E",
+        "#C77DD6",
+        "#FF6F91",
+        "#59C7B0",
+        "#FFA23A",
+        "#8C9EFF"
+      ],
+      "sequential": [
+        "#EAF6F0",
+        "#C7E8DC",
+        "#9FD8C6",
+        "#74C6AF",
+        "#4DB398",
+        "#3A9E82",
+        "#2E8B77"
+      ],
+      "diverging": [
+        "#FF6F91",
+        "#FFC1CE",
+        "#F2F8F5",
+        "#9FD8C6",
+        "#2E8B77"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Passion One",
+          "video": "Passion One",
+          "bold": false
+        },
+        "body": {
+          "static": "Montserrat",
+          "video": "Montserrat",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 30,
+        "subtitle": 21,
+        "axisTitle": 20,
+        "axisLabel": 22,
+        "legend": 22,
+        "tooltip": 20,
+        "value": 24,
+        "footer": 17
+      },
+      "shape": {
+        "barRadius": 8,
+        "barOpacity": 1,
+        "swatchRadius": 6,
+        "tooltipRadius": 10,
+        "gridWidth": 0.4,
+        "ruleWidth": 0.8,
+        "barWidth": 72
+      },
+      "gridPolicy": "none",
+      "valueLabels": true,
+      "videoScaleMultiplier": 2.3
+    },
+    "clinical": {
+      "title": "Clinical",
+      "mode": "light",
+      "grounding": "Lab report printouts and patient monitors: a dense cool grid where blue is normal, red means out of range, and the reader is scanning for the exception.",
+      "useWhen": "Medicine, diagnostics, quality control, compliance, SLA and threshold monitoring, A/B test readouts. Use when some values are good and some are bad and the chart must say which.",
+      "bg": "#FBFCFD",
+      "surface": "#FFFFFF",
+      "ink": "#101820",
+      "body": "#35424E",
+      "muted": "#6E7C8A",
+      "rule": "#C6D0DA",
+      "grid": "#E6ECF2",
+      "ramp": [
+        "#1D5FA8",
+        "#C62828",
+        "#2E8B7A",
+        "#6A4FA3",
+        "#B26A00",
+        "#4A7FB5",
+        "#8A3A3A",
+        "#3E7C4F",
+        "#5A6B7C"
+      ],
+      "sequential": [
+        "#EEF4FA",
+        "#CFE0F0",
+        "#A9C7E4",
+        "#7FA9D3",
+        "#548BC1",
+        "#3273B4",
+        "#1D5FA8"
+      ],
+      "diverging": [
+        "#C62828",
+        "#E8A0A0",
+        "#F2F5F7",
+        "#8FB4D8",
+        "#1D5FA8"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Inter",
+          "video": "Inter",
+          "bold": true
+        },
+        "body": {
+          "static": "Inter",
+          "video": "Inter",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 22,
+        "subtitle": 17,
+        "axisTitle": 18,
+        "axisLabel": 18,
+        "legend": 17,
+        "tooltip": 16,
+        "value": 16,
+        "footer": 14
+      },
+      "shape": {
+        "barRadius": 0,
+        "barOpacity": 1,
+        "swatchRadius": 2,
+        "tooltipRadius": 3,
+        "gridWidth": 0.4,
+        "ruleWidth": 0.6,
+        "barWidth": 56
+      },
+      "gridPolicy": "both",
+      "valueLabels": false,
+      "videoScaleMultiplier": 2.1,
+      "notes": "The red at ramp[1] is a semantic slot, not the second-favourite colour. If nothing in the data is an exception, drop it and start the series at ramp[0] then ramp[2]."
+    },
+    "nocturne": {
+      "title": "Nocturne",
+      "mode": "dark",
+      "grounding": "Stage lighting against a night sky: jewel tones lit from within, set on deep indigo rather than black so the colours keep their saturation on a phone screen.",
+      "useWhen": "Keynote slides, launch announcements, social and vertical video, year-in-review pieces. The dark option when Broadcast would be too loud and Terminal too technical.",
+      "bg": "#12102A",
+      "surface": "#1D1A3D",
+      "ink": "#F4F1FF",
+      "body": "#C6BFE8",
+      "muted": "#8A82B8",
+      "rule": "#35306B",
+      "grid": "#262254",
+      "ramp": [
+        "#7C6BFF",
+        "#38E1C9",
+        "#FFC857",
+        "#FF6FA5",
+        "#4FC3F7",
+        "#9EE37D",
+        "#FF8F5A",
+        "#C58AFF",
+        "#5AD1E0"
+      ],
+      "sequential": [
+        "#1D1A3D",
+        "#2C2760",
+        "#3D3684",
+        "#5148A8",
+        "#6659CC",
+        "#7263E8",
+        "#7C6BFF"
+      ],
+      "diverging": [
+        "#FF6FA5",
+        "#A05480",
+        "#262254",
+        "#4A7FB0",
+        "#38E1C9"
+      ],
+      "fonts": {
+        "display": {
+          "static": "Montserrat",
+          "video": "Montserrat",
+          "bold": true
+        },
+        "body": {
+          "static": "Montserrat",
+          "video": "Montserrat",
+          "bold": false
+        }
+      },
+      "scale": {
+        "title": 28,
+        "subtitle": 21,
+        "axisTitle": 20,
+        "axisLabel": 21,
+        "legend": 20,
+        "tooltip": 18,
+        "value": 22,
+        "footer": 17
+      },
+      "shape": {
+        "barRadius": 6,
+        "barOpacity": 1,
+        "swatchRadius": 4,
+        "tooltipRadius": 8,
+        "gridWidth": 0.4,
+        "ruleWidth": 0.8,
+        "barWidth": 66
+      },
+      "gridPolicy": "value-axis-only",
+      "valueLabels": true,
+      "videoScaleMultiplier": 2.4
+    }
+  },
+  "_canvasBaseline": "Font sizes are absolute numbers, but they reach the page through two different systems: header/subtitle/footer are absolute-pixel HTML, while axis, legend and value text is in the chart SVG and scales with the container and the chart's density. These values are tuned to render correctly in a typical embed, which is the artifact users share. They will look small in a wide, short export -- verify on the surface you are delivering to rather than raising them to suit the PNG. apply_design.py --canvas scales the whole set together."
+}

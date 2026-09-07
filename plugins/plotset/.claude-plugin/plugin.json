@@ -1,0 +1,31 @@
+{
+  "name": "plotset",
+  "displayName": "PlotSet",
+  "version": "0.1.0",
+  "description": "Turn a spreadsheet into a publishable chart or an animated data video. Cleans messy data, picks the chart from the data's shape, and dresses it in one of ten design systems.",
+  "author": {
+    "name": "PlotSet",
+    "url": "https://plotset.com"
+  },
+  "homepage": "https://plotset.com",
+  "repository": "https://github.com/plotset-corp/claude-plugins",
+  "keywords": [
+    "charts",
+    "data-visualization",
+    "dataviz",
+    "graphs",
+    "maps",
+    "choropleth",
+    "bar-chart-race",
+    "data-video",
+    "csv",
+    "spreadsheet",
+    "embed"
+  ],
+  "mcpServers": {
+    "plotset": {
+      "type": "http",
+      "url": "https://mcp.plotset.com/mcp"
+    }
+  }
+}

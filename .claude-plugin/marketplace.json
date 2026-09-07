@@ -1,0 +1,16 @@
+{
+  "name": "plotset",
+  "owner": {
+    "name": "PlotSet",
+    "url": "https://plotset.com"
+  },
+  "description": "PlotSet's official Claude Code plugin marketplace — turn data into charts and animated data videos without leaving your editor.",
+  "plugins": [
+    {
+      "name": "plotset",
+      "source": "./plugins/plotset",
+      "description": "Build, restyle and publish PlotSet charts and animated data videos from a CSV or spreadsheet. Ships the PlotSet MCP server, ten chart design systems, and data normalization.",
+      "category": "data-visualization"
+    }
+  ]
+}
